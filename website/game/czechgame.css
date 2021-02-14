@@ -1,0 +1,62 @@
+@charset "utf-8";
+body {
+	margin: 0;
+	padding: 0;
+	font-size: 36px;       /* to make untagged content stand out */
+	color: green;          /* to make untagged content stand out */
+}
+/* D E F I N E     C O N T A I N E R S *******************************************************************/
+/* Assume header, leftmenu, and content containers will be contained within wrapper */
+/* Widths of all inner containers (width+margin+padding) must not exceed width of wrapper  */
+#wrapper {
+	width: 600px;
+	margin: auto;
+	border: 3px solid red;
+	background-color: skyblue;
+}
+#banner {
+	width: 600px;
+	height: 200px;
+	margin: 0;
+	padding: 0;
+	background: gray url(czechflag.jpg) no-repeat;
+	border-bottom: 1px solid white;
+}
+
+#content{
+	width: 560px;
+	margin: 0;
+	padding: 20px;
+}
+#footer {
+	width: 600px;
+	margin: 0;
+	padding: 0;
+	background-color: antiquewhite;
+}
+
+/* D E F I N E     S T Y L E S   *************************************************************************/
+/* SET ATTRIBUTES FOR STANDARD TAGS */
+h2 {
+	color: darkred;
+	font-size: 28px;
+	font-family: sans-serif;
+	letter-spacing: .1em;
+}
+p {
+	font-family: times,serif;
+	font-size: 18px;
+  color: black;
+}
+
+/* SET ATTRIBUTES FOR FOOTER */
+#footer p {
+	text-align: center;
+  margin: auto;
+	font-size: 11px;
+  letter-spacing: 0.3em;
+	color: red;
+}
+
+/* GLOBAL CLASSES */
+.center { text-align: center; }

@@ -1,0 +1,163 @@
+<html>
+<head>
+  <title>Quiz</title>
+  <link href="czechgame.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div id="wrapper">
+    <div id="banner"></div>
+    <div id="content">
+      <h2>How Czech are you?</h2>
+      <p id="message">This is a short quiz to determine how much you know about Czech culture and people. Are you Czech enough to know all the answers?</p>
+      <p class="center"><button onclick="runQuiz()">Czech out this quiz.</button></p>
+      <script type="text/javascript">
+      function runQuiz() {
+        var totalPoints = 0;
+        var response = '';
+
+// Question section
+        response = prompt("How do you spend a typical weekend?\n"+
+            "a. Hanging out with friends!\n"+
+            "b. Mostly busy and working overtime.\n"+
+            "c. Visiting my family cabin in the woods\n"+
+            "d. Volunteering, playing sports, etc.\n");
+        if (response == "c") {
+          totalPoints = totalPoints + 1;
+        }
+        response = prompt("What is your ideal vacation location?\n"+
+            "a. Croatia\n"+
+            "b. Italy \n"+
+            "c. Japan\n"+
+            "d. Norway\n");
+        if (response == "a") {
+          totalPoints = totalPoints + 1;
+        }
+        response = prompt("What is your favorite alcoholic beverage?\n"+
+            "a. Wine\n"+
+            "b. Beer \n"+
+            "c. Shots!\n"+
+            "d. I don't drink.\n");
+        if (response == "b") {
+          totalPoints = totalPoints + 1;
+        }
+        response = prompt("How Christian are you?\n"+
+            "a. I attend church weekly\n"+
+            "b. I am religious, but not Christian \n"+
+            "c. I attend Mass on Christmas\n"+
+            "d. I am not religious\n");
+        if (response == "c") {
+          totalPoints = totalPoints + 1;
+        }
+        response = prompt("What food do you enjoy gathering in the forest?\n"+
+            "a. Apples\n"+
+            "b. Berries \n"+
+            "c. Mushrooms\n"+
+            "d. Current\n");
+        if (response == "c") {
+          totalPoints = totalPoints + 1;
+        }
+        response = prompt("When inviting guests over you offer them...\n"+
+            "a. Open-faced sandwiches\n"+
+            "b. Homemade Bread \n"+
+            "c. Fresh-caught Fish\n"+
+            "d. Berry Pie\n");
+        if (response == "a") {
+          totalPoints = totalPoints + 1;
+        }
+        response = prompt("What is your favorite Christmas film?\n"+
+            "a. Nightmare Before Christmas\n"+
+            "b. Elf\n"+
+            "c. Polar Express\n"+
+            "d. Cinderella\n");
+        if (response == "d") {
+          totalPoints = totalPoints + 1;
+        }
+        response = prompt("What is your favorite sport?\n"+
+            "a. Ballet\n"+
+            "b. Hockey\n"+
+            "c. Track and Cross Country\n"+
+            "d. American Football\n");
+        if (response == "b") {
+          totalPoints = totalPoints + 1;
+        }
+        response = prompt("What wild beast do you consider a nuisance?\n"+
+            "a. Bear\n"+
+            "b. Mountain Lion \n"+
+            "c. Rattlesnake\n"+
+            "d. Wild Boar\n");
+        if (response == "d") {
+          totalPoints = totalPoints + 1;
+        }
+        response = prompt("Which of these do you eat least?\n"+
+            "a. Poppy Seeds\n"+
+            "b. Potato Salad\n"+
+            "c. Sauerkraut\n"+
+            "d. Cornbread\n");
+        if (response == "d") {
+          totalPoints = totalPoints + 1;
+        }
+        response = prompt("Who is your favorite cartoon character?\n"+
+            "a. Bugs Bunny\n"+
+            "b. Little Mole\n"+
+            "c. Pink Panther\n"+
+            "d. Mickey Mouse\n");
+        if (response == "b") {
+          totalPoints = totalPoints + 1;
+        }
+        response = prompt("What is your first language?\n"+
+            "a. English\n"+
+            "b. Czech\n"+
+            "c. Russian\n"+
+            "d. Other\n");
+        if (response == "b") {
+          totalPoints = totalPoints + 1;
+        }
+        response = prompt("How would you describe your sense of humor?\n"+
+            "a. Dry\n"+
+            "b. Dark\n"+
+            "c. Impromptu\n"+
+            "d. Sarcastic\n");
+        if (response == "d") {
+          totalPoints = totalPoints + 1;
+        }
+        response = prompt("What is your favorite dessert?\n"+
+            "a. Cinammon Cookies\n"+
+            "b. Baumkuchen\n"+
+            "c. Fruit Dumplings\n"+
+            "d. Peach Pudding\n");
+        if (response == "c") {
+          totalPoints = totalPoints + 1;
+        }
+        response = prompt("When you first meet someone you are...\n"+
+            "a. Open and Trusting\n"+
+            "b. Ready to be friends\n"+
+            "c. Polite and Formal\n"+
+            "d. Mostly just small talk\n");
+        if (response == "c") {
+          totalPoints = totalPoints + 1;
+        }
+
+
+// Tally section
+        var score = totalPoints / 15 * 100;
+        score = Math.round(score);
+        if (score > 80) {
+          document.getElementById("message").innerHTML = "You are " + score + "% Czech! People can't help but Czech out how Czech you are!";
+        } else if (score > 65) {
+          document.getElementById("message").innerHTML = "You are " + score + "% Czech! You surely have some Czech ancestry.";
+        } else if (score > 50) {
+          document.getElementById("message").innerHTML = "You are " + score + "% Czech! You have probably visited Czech Republic, or you just enjoy games like Checkers and payments in the forms of Checks.";
+        }else if (score > 40) {
+          document.getElementById("message").innerHTML = "You are " + score + "% Czech! You must have a Czech friend!";
+        } else if (score > 25) {
+          document.getElementById("message").innerHTML = "You are " + score + "% Czech. You may not be Czech, but you have some Czech qualities!";
+        } else {
+          document.getElementById("message").innerHTML = "You are " + score + "% Czech...Czech Mate. You lose the quiz and are not Czech.";
+        }
+      }
+    </script>
+    </div>
+    <div id="footer"><p>Copyright &copy;2020 Catherine Munzar</p></div>
+  </div>
+</body>
+</html>
